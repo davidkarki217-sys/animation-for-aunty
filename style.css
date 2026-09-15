@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* HI AUNTY */
+
+#hiText {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+/* GLITCH */
+
+#glitch {
+    position: fixed;
+    inset: 0;
+    background: #111;
+
+    display: none;
+}
+
+.noise {
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            white 0px,
+            #777 1px,
+            black 2px,
+            #aaa 3px
+        );
+
+    opacity: 0.8;
+    animation: noiseMove 0.08s infinite;
+}
+
+.lines {
+    position: absolute;
+    inset: 0;
+
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 3px,
+        rgba(255,255,255,0.25) 4px
+    );
+}
+
+@keyframes noiseMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-5px, 4px);
+    }
+
+    50% {
+        transform: translate(5px, -3px);
+    }
+
+    75% {
+        transform: translate(-3px, -5px);
+    }
+
+    100% {
+        transform: translate(4px, 3px);
+    }
+}
+
+/* SCARY SMILE */
+
+#scary {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ONLY SMILE — NO TEETH */
+
+.smile {
+    width: 380px;
+    height: 180px;
+
+    border-bottom: 14px solid white;
+    border-radius: 0 0 50% 50%;
+
+    animation: scarySmile 1s infinite alternate;
+}
+
+@keyframes scarySmile {
+    from {
+        transform: scale(0.95);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* TEXT */
+
+.finalText {
+    margin-top: 35px;
+
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    animation: textAppear 1s forwards;
+}
+
+@keyframes textAppear {
+    to {
+        opacity: 1;
+    }
+}
+    animation: noiseMove 0.08s infinite;
+}
+
+.lines {
+    position: absolute;
+    inset: 0;
+
+    background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 3px,
+        rgba(255,255,255,0.25) 4px
+    );
+
+    animation: lineMove 0.15s infinite;
+}
+
+@keyframes noiseMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-5px, 4px);
+    }
+
+    50% {
+        transform: translate(5px, -3px);
+    }
+
+    75% {
+        transform: translate(-3px, -5px);
+    }
+
+    100% {
+        transform: translate(4px, 3px);
+    }
+}
+
+@keyframes lineMove {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/* =========================
+   SCARY SMILE
+========================= */
+
+#scary {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    z-index: 30;
+}
+
+/* Smile */
+
+.smile {
+    width: 360px;
+    height: 170px;
+
+    border-bottom: 15px solid white;
+    border-radius: 0 0 50% 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 7px;
+    padding-top: 55px;
+
+    animation: scarySmile 1s infinite alternate;
+}
+
+.smile span {
+    width: 28px;
+    height: 48px;
+
+    background: white;
+    border-radius: 3px;
+}
+
+@keyframes scarySmile {
+    from {
+        transform: scale(0.95);
+    }
+
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Final Text */
+
+.finalText {
+    margin-top: 40px;
+
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    animation: textAppear 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes textAppear {
+    to {
+        opacity: 1;
+    }
+}
